@@ -4,7 +4,7 @@ var area = 2060;
 console.log(area/2);
 
 /** Problem -02 ( Cycle or Laptop ) */
-var money = 9999;
+var money = 45000;
 //code
 
 if(money >=25000){
@@ -18,7 +18,7 @@ else{
 }
 
 /** Problem -03 ( Medicine Planner ) */
-var lastDay = 4 ;
+var lastDay = 6 ;
 //code
 for( var i=1; i<= lastDay; i++){
     if(i%3===0){
@@ -30,7 +30,7 @@ for( var i=1; i<= lastDay; i++){
 }
 
 /** Problem 04 - (Delete / Store) */
-var fileName= "exp.mp4";
+var fileName= "#exp.mp4";
 //code
 if(fileName.startsWith('#') || fileName.toLowerCase().endsWith('pdf') || fileName.toLowerCase().endsWith('docx')){
     console.log("Store");
@@ -45,7 +45,7 @@ var student= { name: "jhanku" , roll: 1014 ,department: "cse" };
 console.log(student.name + student.roll + "." +student.department + "@ph.ac.bd");
 
 /** Problem 06 :  (Current Salary )  */
-var experience = 40;
-var startingSalary = 30000;
+var experience = 30;
+var startingSalary = 45000;
 //code
 console.log((startingSalary * (1+0.05) ** experience).toFixed(2));
