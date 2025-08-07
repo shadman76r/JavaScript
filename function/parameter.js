@@ -26,3 +26,13 @@ function add(number1, number2){
 }
 add(5,71);
 add(65,31);
+
+//another one
+
+function addAll(a,b,c,d,e){
+    const total= a+b+c+d+e;
+    console.log(total);
+}
+
+addAll(3,4,5,7,8);
+addAll(3,4,5,7,0);
