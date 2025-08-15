@@ -1,10 +1,8 @@
-// task 2 must be sorted in a proper way
-
 function onlyCharacter(str) {
     if (typeof str !== "string") {
         return "Invalid";
     }
-    let onlyCharacters = str.replace(/\s+/g,"");
+    let onlyCharacters = str.split(" ").join("");
     return onlyCharacters.toUpperCase();
 }
 
