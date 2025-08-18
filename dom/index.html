@@ -15,16 +15,36 @@
             <li>jalali set</li>
             <li>safayat</li>
             <li>none</li>
+            <li>none</li>
         </ul>
     </main>
 
     <!-- js script -->
-     <script src="../js/dom.js"></script>
      <script>
-        const student = {
-            name: 'abul',
-            id: 11,
+       const student ={
+        name:'abul mia',
+        id: 121,
+        // function
+        // also called object
+        study: function (subject){
+           console.log('studying subject', subject) 
         }
+       }
+    //    document.getElementsByTagName('li')
+    // this is a array like object
+
+    const licollection = document.getElementsByTagName('li');
+    console.log(licollection);
+    for(const li of licollection){
+        console.log(li.innerText)
+    }
+
+    // all h1 tags
+    const allheading  = document.getElementsByTagName('h1')
+    for(const h1 of allheading){
+        console.log(h1.innerText)
+        console.log(h1.innerHTML)
+    }
      </script>
     
 </body>
