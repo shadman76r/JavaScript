@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>more event</title>
+    </head>
+    <body>
+        <button id="btn-mouse">Mouse Enter</button>
+        <button id="btn-mouse-move">Mouse Move</button>
+        <button id="btn-mouse-out">Mouse Out</button>
+        <input type="text" id="user-name" placeholder="your name">
+        <input type="email" name id="user-email" placeholder="your-email">
+
+        <input type="text" name="" id="key" placeholder="to check the key part">
+         <input type="text" name="" id="key-up" placeholder="to check the key part this is the part of keyup">
+        <script>
+        // mouseenter
+        document.getElementById('btn-mouse')
+        .addEventListener('mouseenter', function(){
+            console.log('event mouseenter');
+        })
+        // mousemove
+         document.getElementById('btn-mouse-move')
+        .addEventListener('mousemove', function(){
+            console.log('event mousemove');
+        })
+        // mouseout
+          document.getElementById('btn-mouse-out')
+        .addEventListener('mouseout', function(){
+            console.log('event mousemove');
+        })
+
+        // input-usename
+
+        // focus
+        // this one is for user-name
+        document.getElementById('user-name').addEventListener('focus', function(){
+            console.log('user about to write');
+
+        })
+        // this part is for user-email
+        document.getElementById('user-email').addEventListener('focus', function(){
+            console.log('user about to write their email')
+        })
+
+
+        // blur
+        // this one is for user-name
+        document.getElementById('user-name').addEventListener('blur', function(){
+            console.log('user done with name');
+
+        })
+        // this part is for user-email
+        document.getElementById('user-email').addEventListener('blur', function(){
+            console.log('user done write their email')
+        })
+
+        // keypress
+        // keydown
+        document.getElementById('key').addEventListener('keydown',function(event){
+            console.log('typing in the key board', event.target.value)
+        })
+        // keyup and in that place the event part is the most important part in the code to do so to check the value in that input and what key i press this is the difference between the event part and the value part give me the part of the value that i am writing and this is the main part too to check the key part
+        document.getElementById('key').addEventListener('keyup',function(event){
+            console.log('typing in the key board', event.target.value)
+        })
+        
+    </script>
+    </body>
+</html>
