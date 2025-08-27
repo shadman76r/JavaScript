@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM event</title>
-</head>
-<body>
-    <h1>there is some number and some other values</h1>
-    <!-- in console to see the output -->
-     <!-- option one for event handler -->
-    <button onclick="console.log(7)">Click Me</button>
-    <button onclick="console.log(6)">another button</button>
-    <button onclick="console.log('i am clicked')">a string</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM event</title>
+    </head>
+    <body>
+        <h1>there is some number and some other values</h1>
+        <!-- in console to see the output -->
+        <!-- option one for event handler -->
+        <button onclick="console.log(7)">Click Me</button>
+        <button onclick="console.log(6)">another button</button>
+        <button onclick="console.log('i am clicked')">a string</button>
 
-    <input type="text">
-    <br>
+        <input type="text">
+        <br>
 
-    <!-- option two for event hadeler -->
-     <button onclick="make()">Make Yellow</button>
-     <button onclick="red()">make red</button>
-     <br>
+        <!-- option two for event hadeler -->
+        <button onclick="make()">Make Yellow</button>
+        <button onclick="red()">make red</button>
+        <br>
 
-     <button id="btn-make-blue">Make Blue</button>
+        <!-- option 3 getelement by id -->
+        <button id="btn-make-blue">Make Blue</button>
 
-     <button id="btn-make-purple">Make purple</button>
+        <button id="btn-make-purple">Make purple</button>
+        <br>
 
-     <!-- internal javascript -->
-    
-     <script>
-      
+        <!-- option 4 event listener -->
+
+        <button id="btn-green">make green</button>
+        <button id="btn-gold">make gold</button>
+
+        <!-- internal javascript -->
+
+        <script>
+        // getElementById.addEventlistener('event type')
+      document.getElementById('btn-green').addEventListener('click', function makegreen(){
+        document.body.style.backgroundColor = 'green';
+      })
+      document.getElementById('btn-gold').addEventListener('click',function gold(){
+        document.body.style.backgroundColor = 'goldenrod';
+      })
      </script>
 
-     <!-- external javascript -->
-    <script src="./js/event.js"></script>
-</body>
+        <!-- external javascript -->
+        <script src="./js/event.js"></script>
+    </body>
 </html>
