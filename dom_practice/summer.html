@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom event summery</title>
+</head>
+<body>
+    <h1>DOM Events Summery</h1>
+    <input type="text" name="" id="user-name" placeholder="Your name">
+    <button onclick="addName()">Update Name</button>
+    <div id="name-container">
+
+    </div>
+
+    <!-- script -->
+    <script>
+        function addName(){
+            // take the value using id
+            const nameInput = document.getElementById('user-name')
+            // To get the value
+            const newName = nameInput.value
+            // take the change node that I want to add the values 
+            const nameContainer = document.getElementById('name-container')
+            // this is for takeing the peragraph tag in a constant value p
+            const p = document.createElement('p');
+            p.innerText = newName;
+            // append the new child in that empty div
+            nameContainer.appendChild(p);
+            nameInput.value=''
+
+
+        }
+    </script>
+</body>
+</html>
