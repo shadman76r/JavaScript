@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event delegate</title>
+    </head>
+    <body>
+        <h1>Explore the concept of Event Delegation</h1>
+        <ol id="item-list">
+            <li class="item">MY Awesome Item - 1</li>
+            <li class="item">MY Awesome Item - 2</li>
+            <li class="item">MY Awesome Item - 3</li>
+            <li class="item">MY Awesome Item - 4</li>
+            <li class="item">MY Awesome Item - 5</li>
+            <li class="item">MY Awesome Item - 6</li>
+        </ol>
+        <button id="btn-add-item"> Add to the parent node</button>
+        <script>
+            // const items = document.getElementsByClassName('item')
+            // for(const itemss of items){
+            //     itemss.addEventListener('click', function(event){
+            //         // console.log(event.target.parentNode)
+            //         // to delate the child and the to delete the target
+            //         event.target.parentNode.removeChild(event.target);
+            //     })
+            // }
+
+            document.getElementById('item-list').addEventListener('click',function(event){
+               event.target.parentNode.removeChild(event.target) 
+            })
+            document.getElementById('btn-add-item').addEventListener('click',function(){
+                console.log('btn clicked')
+                // parent to be added to
+                const ol =document.getElementById('item-list')
+
+                // new item 
+                const li = document.createElement('li')
+                // this is the added item to remove the other part
+                li.classList.add('item')
+                li.innerText = 'item added in the chart'
+
+                // add
+
+                ol.appendChild(li);
+            })
+        </script>
+    </body>
+</html>
