@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+    <style>
+        body{
+            border: 2px solid royalblue;
+            margin: 5px;
+        }
+         section{
+            border: 2px solid green;
+            margin: 5px;
+        }
+         ol{
+            border: 2px solid red;   
+            margin: 5px;
+        }
+         li{
+            border: 2px solid royalblue;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>event bubble</h1>
+    <section id="list-container">
+        <h3>list of things</h3>
+        <ol id="item-list">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Earum, quia!</li>
+            <li id="item-3">Nemo, excepturi.</li>
+            <li id="item-4">Quaerat, minima?</li>
+            <li id="item-5">Repellat, ab?</li>
+            <li id="item-6">Explicabo, dolorum?</li>
+        </ol>
+    </section>
+    <script>
+        // to stop the bubble sort part i need to add event and event.stopPropagation();
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('item-2 is selected')
+            // this is new and this is connected with bubble and propagation and ImmediatePropagation();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-list').addEventListener('click',function(){
+            
+        })
+        document.getElementById('list-container').addEventListener('click',function(){
+            
+        })
+    </script>
+</body>
+</html>
